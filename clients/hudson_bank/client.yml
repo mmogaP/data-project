@@ -1,0 +1,18 @@
+# Fictional banking client. Everything the platform needs to run this client is here
+# plus the dbt project in ./dbt.
+client_id: hudson_bank
+display_name: Hudson Community Bank
+industry: banking
+enabled: true
+schedule_hour: 7
+schedule_minute: 0
+timezone: America/New_York
+dbt_project_dir: dbt
+
+sources:
+  - name: cfpb_complaints
+    connector: cfpb_complaints
+    start_date: "2026-08-01"
+    freshness_sla_hours: 48 #service level agreement for data freshness
+    params:
+      page_size: 10000

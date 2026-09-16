@@ -1,0 +1,12 @@
+# Fictional healthcare client. Disabled until its connectors and dbt project exist.
+# Planned sources: Synthea (synthetic FHIR patients), openFDA adverse events, NY SPARCS.
+client_id: empire_health
+display_name: Empire Health Network
+industry: healthcare
+enabled: false
+schedule_hour: 6
+schedule_minute: 0
+timezone: America/New_York
+dbt_project_dir: dbt
+
+sources: []
