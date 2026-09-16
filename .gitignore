@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+.pytest_cache/
+.ruff_cache/
+
+# Local data (raw landing zone + DuckDB warehouses)
+data/
+
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# Dagster local instance
+.dagster_home/
+
+# Secrets
+.env
+*.tfstate
+*.tfstate.*
+.terraform/
+.tmp_dagster_home*/
+*.concurrent-update-lock
