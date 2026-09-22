@@ -1,0 +1,5 @@
+# Shared dbt package used by every client project: PII helpers and generic tests.
+name: dbt_core
+version: "0.1.0"
+config-version: 2
+macro-paths: ["macros"]
