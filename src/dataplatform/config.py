@@ -20,7 +20,9 @@ class SourceConfig(BaseModel):
     connector: str
     start_date: date
     freshness_sla_hours: int = 48
-    params: dict = Field(default_factory=dict) #write like this so every object gets its own dictionary instead of sharing the same one across all instances
+    # write like this so every object gets its own dictionary
+    # instead of sharing the same one across all instances
+    params: dict = Field(default_factory=dict)
 
 
 class ClientConfig(BaseModel):
@@ -49,7 +51,8 @@ class ClientConfig(BaseModel):
 
 
 def load_client(path: Path) -> ClientConfig:
-    return ClientConfig.model_validate(yaml.safe_load(path.read_text())) #it loads safe_load as safety measures
+    # it loads safe_load as safety measures
+    return ClientConfig.model_validate(yaml.safe_load(path.read_text()))
 
 
 @cache #cache of current clients so we don't have to reload them every time we call this function

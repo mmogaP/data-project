@@ -6,6 +6,7 @@ uv run dagster dev -m dataplatform.orchestration.definitions
 import dagster as dg
 
 from dataplatform.config import load_clients
+from dataplatform.orchestration.export import build_export_asset
 from dataplatform.orchestration.ingestion import build_freshness_check, build_ingestion_asset
 from dataplatform.orchestration.transformation import build_dbt_assets
 
@@ -18,7 +19,7 @@ def build_definitions() -> dg.Definitions:
         checks += [build_freshness_check(client, s) for s in client.sources]
 
         dbt_defs, dbt_resource = build_dbt_assets(client)
-        client_assets.append(dbt_defs)
+        client_assets += [dbt_defs, build_export_asset(client)]
         resources[f"dbt_{client.client_id}"] = dbt_resource
         assets += client_assets
 

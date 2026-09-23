@@ -8,9 +8,9 @@ from typing import Any
 import dagster as dg
 from dagster_dbt import DagsterDbtTranslator, DbtCliResource, DbtProject, dbt_assets
 
-from dataplatform.config import REPO_ROOT, ClientConfig
+from dataplatform.config import ClientConfig
 from dataplatform.orchestration.ingestion import raw_asset_key
-from dataplatform.storage import raw_root
+from dataplatform.storage import raw_root, warehouse_root
 
 
 class ClientDbtTranslator(DagsterDbtTranslator):
@@ -32,11 +32,7 @@ class ClientDbtTranslator(DagsterDbtTranslator):
 
 def dbt_env() -> dict[str, str]:
     """dbt runs with cwd = project dir, so hand it absolute paths."""
-    warehouse = os.environ.get("WAREHOUSE_ROOT", "data/warehouse")
-    return {
-        "RAW_ROOT": raw_root(),
-        "WAREHOUSE_ROOT": warehouse if os.path.isabs(warehouse) else str(REPO_ROOT / warehouse),
-    }
+    return {"RAW_ROOT": raw_root(), "WAREHOUSE_ROOT": warehouse_root()}
 
 
 def build_dbt_project(client: ClientConfig) -> DbtProject:

@@ -27,6 +27,13 @@ def raw_root() -> str:
     return str(path if path.is_absolute() else REPO_ROOT / path)
 
 
+def warehouse_root() -> str:
+    """Where per-client DuckDB warehouses live (dbt's dev target)."""
+    root = os.environ.get("WAREHOUSE_ROOT", "data/warehouse")
+    path = Path(root)
+    return str(path if path.is_absolute() else REPO_ROOT / path)
+
+
 def partition_path(client_id: str, source: str, day: date, root: str | None = None) -> str:
     return f"{root or raw_root()}/{client_id}/{source}/ds={day.isoformat()}/data.parquet"
 

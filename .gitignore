@@ -9,8 +9,9 @@ wheels/
 .pytest_cache/
 .ruff_cache/
 
-# Local data (raw landing zone + DuckDB warehouses)
-data/
+# Local data (raw landing zone + DuckDB warehouses). Root only: the dashboard's
+# exported JSON lives in web/src/lib/data and is committed.
+/data/
 
 # dbt
 target/
