@@ -4,15 +4,15 @@
     "name": "Hudson Community Bank",
     "industry": "banking"
   },
-  "generated_at": "2026-09-23T00:52:42+00:00",
+  "generated_at": "2026-09-23T01:40:12+00:00",
   "kpis": {
-    "complaints": 122398,
-    "companies": 586,
-    "days_covered": 5,
+    "complaints": 385157,
+    "companies": 881,
+    "days_covered": 21,
     "timely_rate": 1.0,
-    "avg_days_to_company": 0.02,
+    "avg_days_to_company": 0.01,
     "first_date": "2026-09-01",
-    "last_date": "2026-09-05"
+    "last_date": "2026-09-21"
   },
   "daily": [
     {
@@ -39,133 +39,213 @@
       "date": "2026-09-05",
       "complaints": 11751,
       "timely": 11751
+    },
+    {
+      "date": "2026-09-06",
+      "complaints": 5489,
+      "timely": 5473
+    },
+    {
+      "date": "2026-09-07",
+      "complaints": 20246,
+      "timely": 20246
+    },
+    {
+      "date": "2026-09-08",
+      "complaints": 26209,
+      "timely": 26209
+    },
+    {
+      "date": "2026-09-09",
+      "complaints": 29154,
+      "timely": 29154
+    },
+    {
+      "date": "2026-09-10",
+      "complaints": 28394,
+      "timely": 28394
+    },
+    {
+      "date": "2026-09-11",
+      "complaints": 27979,
+      "timely": 27979
+    },
+    {
+      "date": "2026-09-12",
+      "complaints": 12054,
+      "timely": 12054
+    },
+    {
+      "date": "2026-09-13",
+      "complaints": 4983,
+      "timely": 4983
+    },
+    {
+      "date": "2026-09-14",
+      "complaints": 22945,
+      "timely": 22945
+    },
+    {
+      "date": "2026-09-15",
+      "complaints": 28131,
+      "timely": 28131
+    },
+    {
+      "date": "2026-09-16",
+      "complaints": 20620,
+      "timely": 20620
+    },
+    {
+      "date": "2026-09-17",
+      "complaints": 12446,
+      "timely": 12446
+    },
+    {
+      "date": "2026-09-18",
+      "complaints": 10833,
+      "timely": 10833
+    },
+    {
+      "date": "2026-09-19",
+      "complaints": 4875,
+      "timely": 4875
+    },
+    {
+      "date": "2026-09-20",
+      "complaints": 2292,
+      "timely": 2292
+    },
+    {
+      "date": "2026-09-21",
+      "complaints": 6109,
+      "timely": 6109
     }
   ],
   "top_companies": [
     {
       "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
-      "complaints": 45805,
-      "share_pct": 38.196,
+      "complaints": 166700,
+      "share_pct": 43.769,
       "timely_rate": 1.0
     },
     {
       "company": "Experian Information Solutions Inc.",
-      "complaints": 35141,
-      "share_pct": 29.303,
+      "complaints": 105260,
+      "share_pct": 27.637,
       "timely_rate": 1.0
     },
     {
       "company": "EQUIFAX, INC.",
-      "complaints": 34311,
-      "share_pct": 28.611,
+      "complaints": 93793,
+      "share_pct": 24.627,
       "timely_rate": 1.0
     },
     {
       "company": "CL Holdings LLC",
-      "complaints": 456,
-      "share_pct": 0.38,
+      "complaints": 1407,
+      "share_pct": 0.369,
       "timely_rate": 1.0
     },
     {
       "company": "Portfolio Recovery Associates, LLC",
-      "complaints": 325,
-      "share_pct": 0.271,
-      "timely_rate": 1.0
-    },
-    {
-      "company": "LEXISNEXIS",
-      "complaints": 321,
-      "share_pct": 0.268,
+      "complaints": 942,
+      "share_pct": 0.247,
       "timely_rate": 1.0
     },
     {
       "company": "Resurgent Capital Services L.P.",
-      "complaints": 313,
-      "share_pct": 0.261,
-      "timely_rate": 1.0
-    },
-    {
-      "company": "CAPITAL ONE FINANCIAL CORPORATION",
-      "complaints": 294,
-      "share_pct": 0.245,
-      "timely_rate": 1.0
-    },
-    {
-      "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
-      "complaints": 287,
+      "complaints": 910,
       "share_pct": 0.239,
       "timely_rate": 1.0
     },
     {
+      "company": "LEXISNEXIS",
+      "complaints": 838,
+      "share_pct": 0.22,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "CAPITAL ONE FINANCIAL CORPORATION",
+      "complaints": 680,
+      "share_pct": 0.179,
+      "timely_rate": 1.0
+    },
+    {
       "company": "ENCORE CAPITAL GROUP INC.",
-      "complaints": 195,
+      "complaints": 622,
       "share_pct": 0.163,
       "timely_rate": 1.0
     },
     {
-      "company": "SYNCHRONY FINANCIAL",
-      "complaints": 192,
-      "share_pct": 0.16,
+      "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+      "complaints": 558,
+      "share_pct": 0.147,
       "timely_rate": 1.0
     },
     {
-      "company": "WELLS FARGO & COMPANY",
-      "complaints": 184,
-      "share_pct": 0.153,
+      "company": "Block, Inc.",
+      "complaints": 549,
+      "share_pct": 0.144,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "Kriya Capital, LLC",
+      "complaints": 517,
+      "share_pct": 0.136,
       "timely_rate": 1.0
     }
   ],
   "products": [
     {
       "product": "Credit reporting or other personal consumer reports",
-      "complaints": 116905
+      "complaints": 369902
     },
     {
       "product": "Debt collection",
-      "complaints": 2827
+      "complaints": 8428
     },
     {
       "product": "Credit card",
-      "complaints": 793
+      "complaints": 2068
     },
     {
       "product": "Checking or savings account",
-      "complaints": 764
+      "complaints": 1828
     },
     {
       "product": "Money transfer, virtual currency, or money service",
-      "complaints": 252
-    },
-    {
-      "product": "Mortgage",
-      "complaints": 233
+      "complaints": 750
     },
     {
       "product": "Vehicle loan or lease",
-      "complaints": 198
+      "complaints": 601
+    },
+    {
+      "product": "Mortgage",
+      "complaints": 506
     },
     {
       "product": "Student loan",
-      "complaints": 185
+      "complaints": 462
     },
     {
       "product": "Payday loan, title loan, personal loan, or advance loan",
-      "complaints": 144
+      "complaints": 385
     },
     {
       "product": "Debt or credit management",
-      "complaints": 51
+      "complaints": 130
     },
     {
       "product": "Prepaid card",
-      "complaints": 46
+      "complaints": 97
     }
   ],
   "pipeline": {
-    "last_ingested_at": "2026-09-16 15:32:00.839174-03:00",
-    "latest_partition": "2026-09-05",
-    "hours_since_ingest": 150.3,
+    "last_ingested_at": "2026-09-22 22:39:58.387327-03:00",
+    "latest_partition": "2026-09-21",
+    "hours_since_ingest": 0.0,
     "sla_hours": 48,
-    "status": "critical"
+    "status": "good"
   }
 }
