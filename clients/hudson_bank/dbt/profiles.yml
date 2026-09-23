@@ -1,0 +1,16 @@
+hudson_bank:
+  target: "{{ env_var('DBT_TARGET', 'dev') }}"
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('WAREHOUSE_ROOT', '../../../data/warehouse') }}/hudson_bank.duckdb"
+      threads: 4
+
+    # Not wired yet: same models, run against BigQuery once infra/terraform exists.
+    prod:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT', 'unset') }}"
+      dataset: hudson_bank
+      location: US
+      threads: 8

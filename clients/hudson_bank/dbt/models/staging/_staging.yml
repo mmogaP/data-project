@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_cfpb__complaints
+    description: Typed, deduplicated CFPB complaints. ZIP codes truncated to 3 digits.
+    columns:
+      - name: complaint_id
+        data_tests: [unique, not_null]
+      - name: received_date
+        data_tests: [not_null]
+      - name: company_name
+        data_tests: [not_null]
+      - name: zip3
+        description: First 3 ZIP digits only; full ZIP is dropped as quasi-identifying.

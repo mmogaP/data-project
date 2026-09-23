@@ -1,0 +1,23 @@
+name: hudson_bank
+version: "1.0.0"
+config-version: 2
+profile: hudson_bank
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # Dagster passes the partition window on every run; these defaults let you run dbt by hand.
+  start_date: "1900-01-01"
+  end_date: "2999-12-31"
+
+models:
+  hudson_bank:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
