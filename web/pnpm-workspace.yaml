@@ -1,3 +1,14 @@
+# `packages` is required by pnpm 10, which is what Cloudflare's build image ships;
+# without it `pnpm install` fails with "packages field missing or empty".
+packages:
+  - .
+
+# Native deps that need their install scripts to run. pnpm 11 reads `allowBuilds`,
+# pnpm 10 reads `onlyBuiltDependencies`; both are listed so either version works.
 allowBuilds:
   esbuild: true
   workerd: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - workerd
