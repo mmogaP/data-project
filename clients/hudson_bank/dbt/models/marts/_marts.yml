@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_complaints
+    description: One row per complaint, incremental by partition_date.
+    columns:
+      - name: complaint_id
+        data_tests: [unique, not_null]
+      - name: days_to_company
+        data_tests:
+          - dbt_core.not_negative:
+              config:
+                severity: warn
+
+  - name: mart_complaints_daily
+    description: Complaints per day, product and state.
+    data_tests:
+      - dbt_core.recent_data:
+          arguments:
+            date_column: received_date
+            max_days_old: 7
+          config:
+            severity: warn
+    columns:
+      - name: complaints
+        data_tests: [not_null]
+
+  - name: mart_company_scorecard
+    description: Complaint-handling benchmark per company (min 50 complaints).
+    columns:
+      - name: company_name
+        data_tests: [unique, not_null]
+      - name: timely_response_rate
+        data_tests:
+          - dbt_core.between:
+              arguments:
+                min_value: 0
+                max_value: 1

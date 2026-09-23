@@ -1,0 +1,4 @@
+packages:
+  - local: ../../../packages/dbt_core
+    name: dbt_core
+sha1_hash: 6143be7cbf933931e9980188abfd37e892257081
