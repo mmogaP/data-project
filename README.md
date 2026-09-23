@@ -13,8 +13,8 @@ clients/<client>/client.yml
         ▼
 ┌──────────────┐   ┌──────────────────────────┐   ┌─────────────────────────────────┐   ┌──────────────┐
 │  Connectors  │──▶│  Raw landing zone        │──▶│  dbt (per client)               │──▶│  Dashboard   │
-│  (Python)    │   │  ds=YYYY-MM-DD/*.parquet │   │  staging → facts → marts        │   │  (planned)   │
-└──────────────┘   │  local  →  GCS           │   │  DuckDB  →  BigQuery            │   │  SvelteKit + │
+│  (Python)    │   │  ds=YYYY-MM-DD/*.parquet │   │  staging → facts → marts        │   │  JSON export │
+└──────────────┘   │  local  →  GCS           │   │  DuckDB  →  BigQuery            │   │  SvelteKit   │
                    └──────────────────────────┘   └─────────────────────────────────┘   │  Cloudflare  │
                                                                                          └──────────────┘
         └──────────────────────── Dagster: daily partitions, backfills, schedules, checks ─┘
@@ -56,7 +56,13 @@ Query the result:
 uv run python -c "import duckdb; print(duckdb.connect('data/warehouse/hudson_bank.duckdb').sql('from main_marts.mart_company_scorecard order by complaint_volume_rank limit 10'))"
 ```
 
-Tests and lint: `uv run pytest` · `uv run ruff check`
+Dashboard:
+
+```bash
+cd web && pnpm install && pnpm run dev     # http://localhost:5173
+```
+
+Tests and lint: `uv run pytest` · `uv run ruff check` · `cd web && pnpm run check`
 
 ## Layout
 
@@ -71,7 +77,7 @@ src/dataplatform/
   storage.py            partitioned raw landing zone (local or gs://)
   orchestration/        Dagster assets, dbt integration, jobs, schedules
 infra/terraform/        GCP + Cloudflare infrastructure (planned)
-web/                    SvelteKit dashboard on Cloudflare (planned)
+web/                    SvelteKit dashboard on Cloudflare (prerendered)
 docs/adr/               architecture decisions
 ```
 
@@ -83,5 +89,6 @@ docs/adr/               architecture decisions
 - [ ] Healthcare client: Synthea (FHIR), openFDA, NY SPARCS
 - [ ] BigQuery `prod` target + GCS raw zone, Terraform
 - [ ] CI: dbt slim CI on PRs (`state:modified+`), deploy on merge
-- [ ] Export marts to Cloudflare D1/R2; SvelteKit dashboard with per-client access
+- [x] Export marts to JSON; prerendered SvelteKit dashboard on Cloudflare
+- [ ] Per-client access on the dashboard (Cloudflare Access)
 - [ ] Pipeline health page and alerting

@@ -1,0 +1,171 @@
+{
+  "client": {
+    "id": "hudson_bank",
+    "name": "Hudson Community Bank",
+    "industry": "banking"
+  },
+  "generated_at": "2026-09-23T00:52:42+00:00",
+  "kpis": {
+    "complaints": 122398,
+    "companies": 586,
+    "days_covered": 5,
+    "timely_rate": 1.0,
+    "avg_days_to_company": 0.02,
+    "first_date": "2026-09-01",
+    "last_date": "2026-09-05"
+  },
+  "daily": [
+    {
+      "date": "2026-09-01",
+      "complaints": 28364,
+      "timely": 28364
+    },
+    {
+      "date": "2026-09-02",
+      "complaints": 28390,
+      "timely": 28390
+    },
+    {
+      "date": "2026-09-03",
+      "complaints": 27776,
+      "timely": 27776
+    },
+    {
+      "date": "2026-09-04",
+      "complaints": 26117,
+      "timely": 26117
+    },
+    {
+      "date": "2026-09-05",
+      "complaints": 11751,
+      "timely": 11751
+    }
+  ],
+  "top_companies": [
+    {
+      "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "complaints": 45805,
+      "share_pct": 38.196,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "Experian Information Solutions Inc.",
+      "complaints": 35141,
+      "share_pct": 29.303,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "EQUIFAX, INC.",
+      "complaints": 34311,
+      "share_pct": 28.611,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "CL Holdings LLC",
+      "complaints": 456,
+      "share_pct": 0.38,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "Portfolio Recovery Associates, LLC",
+      "complaints": 325,
+      "share_pct": 0.271,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "LEXISNEXIS",
+      "complaints": 321,
+      "share_pct": 0.268,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "Resurgent Capital Services L.P.",
+      "complaints": 313,
+      "share_pct": 0.261,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "CAPITAL ONE FINANCIAL CORPORATION",
+      "complaints": 294,
+      "share_pct": 0.245,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+      "complaints": 287,
+      "share_pct": 0.239,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "ENCORE CAPITAL GROUP INC.",
+      "complaints": 195,
+      "share_pct": 0.163,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "SYNCHRONY FINANCIAL",
+      "complaints": 192,
+      "share_pct": 0.16,
+      "timely_rate": 1.0
+    },
+    {
+      "company": "WELLS FARGO & COMPANY",
+      "complaints": 184,
+      "share_pct": 0.153,
+      "timely_rate": 1.0
+    }
+  ],
+  "products": [
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "complaints": 116905
+    },
+    {
+      "product": "Debt collection",
+      "complaints": 2827
+    },
+    {
+      "product": "Credit card",
+      "complaints": 793
+    },
+    {
+      "product": "Checking or savings account",
+      "complaints": 764
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "complaints": 252
+    },
+    {
+      "product": "Mortgage",
+      "complaints": 233
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "complaints": 198
+    },
+    {
+      "product": "Student loan",
+      "complaints": 185
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "complaints": 144
+    },
+    {
+      "product": "Debt or credit management",
+      "complaints": 51
+    },
+    {
+      "product": "Prepaid card",
+      "complaints": 46
+    }
+  ],
+  "pipeline": {
+    "last_ingested_at": "2026-09-16 15:32:00.839174-03:00",
+    "latest_partition": "2026-09-05",
+    "hours_since_ingest": 150.3,
+    "sla_hours": 48,
+    "status": "critical"
+  }
+}

@@ -1,0 +1,11 @@
+{
+	// Deploy with: pnpm run build && pnpm dlx wrangler deploy
+	"name": "hudson-dashboard",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-09-01",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	}
+}
